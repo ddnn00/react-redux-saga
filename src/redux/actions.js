@@ -1,4 +1,4 @@
-import { CREATE_MUSIC, CREATE_POST } from "./types";
+import { CREATE_POST, DELETE_POST } from "./types";
 
 export function createPost(post) {
     return {
@@ -7,9 +7,9 @@ export function createPost(post) {
     }
 }
 
-export function createMusic(music) {
+export function deletePost(postId) {
     return {
-        type: CREATE_MUSIC,
-        payload: music
+        type: DELETE_POST,
+        payload: postId
     }
-}
+} 
