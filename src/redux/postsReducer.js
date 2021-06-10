@@ -1,4 +1,4 @@
-import { CREATE_POST, CREATE_MUSIC } from "./types"
+import { CREATE_POST, DELETE_POST } from "./types"
 
 const initialState = {
     posts: [],
@@ -10,6 +10,8 @@ export const postsReducer = (state = initialState, action) => {
     {
         case CREATE_POST:
             return {...state, posts: state.posts.concat(action.payload)}
+        case DELETE_POST:
+            return {...state, posts: state.posts.filter((data, i) => data.id !== action.payload )}
         default: return state
     }
 }

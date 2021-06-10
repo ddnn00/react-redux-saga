@@ -4,12 +4,12 @@ import { connect } from 'react-redux'
 
 const Posts = ({ syncPosts }) => {
     if (!syncPosts.length) return <p>Постов нет</p>
-    return syncPosts.map(post => <Post post={post} key={post.id} /> )
+    return syncPosts.map(post => <Post post={post} key={post.id} i={post.id} /> )
 }
 
 const mapStateToProps = state => {
     return {
-        syncPosts: state.posts.posts
+        syncPosts: state.post.posts
     }
 }
 

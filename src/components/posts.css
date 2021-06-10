@@ -1,0 +1,9 @@
+.post-close {
+    color: #ff2c36;
+    font-size: 42px;
+    font-family: Arial;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
