@@ -2,8 +2,7 @@ import { CREATE_POST, CREATE_MUSIC } from "./types"
 
 const initialState = {
     posts: [],
-    fetchedPosts: [],
-    musics
+    fetchedPosts: []
 }
 
 export const postsReducer = (state = initialState, action) => {
@@ -11,9 +10,6 @@ export const postsReducer = (state = initialState, action) => {
     {
         case CREATE_POST:
             return {...state, posts: state.posts.concat(action.payload)}
-        case 
         default: return state
     }
-    
-    return state
 }
